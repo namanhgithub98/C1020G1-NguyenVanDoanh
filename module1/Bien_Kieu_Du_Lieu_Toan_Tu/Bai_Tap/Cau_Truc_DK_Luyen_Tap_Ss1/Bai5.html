@@ -2,9 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Xếp loại học sinh</title>
 </head>
 <body>
-$END$
+    <script>
+        let pointTest =parseFloat(prompt("Nhập điểm bài kiểm tra: "));
+        let pointMid =parseFloat(prompt("Nhập điểm giữa kì: "));
+        let pointFinal=parseFloat(prompt("Nhập điểm cuối kì: "));
+
+        let pointaverage = (pointTest + pointMid*2 + pointFinal*3);
+
+        if (pointaverage >=8)
+            alert("Điểm TB là: " +pointaverage +"\n Xếp loại Giỏi.");
+        else if (pointaverage >=6.5)
+            alert("Điểm TB là: " +pointaverage +"\n Xếp loại Khá.");
+        else if (pointaverage >= 5)
+            alert("Điểm TB là: " +pointaverage +"\n Xếp loại Trung Bình.");
+        else alert("Xếp loại Yếu.");
+    </script>
+
 </body>
 </html>

@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Nhập 3 số nguyên</title>
 </head>
 <body>
-$END$
+    <script>
+
+       let a = parseInt(prompt("Nhập giá trị số nguyên a: "))
+       let b = parseInt(prompt("Nhập giá trị số nguyên b: "))
+       let c = parseInt(prompt("Nhập giá trị số nguyên c: "))
+        let max = a ;
+        if (max < b)
+            max = b;
+        if (max < c)
+            max = c;
+        alert('Số lớn nhất là: '+max);
+    </script>
 </body>
 </html>

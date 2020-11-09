@@ -2,9 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Giai phương trình bậc nhất</title>
 </head>
 <body>
-$END$
+    <script>
+        let a = parseInt(prompt('Nhập a:'))
+        let b = parseInt(prompt('Nhập b:'))
+
+        let x = (-b)/a
+
+        if (a == 0)
+             if (b == 0)
+                alert('Phương trình vô số nghiệm.')
+             else if (b != 0)
+                 alert('Phương trình vô nghiệm.')
+        if (a != 0)
+            alert('Phương trình có nghiệm là:' +x);
+    </script>
 </body>
 </html>

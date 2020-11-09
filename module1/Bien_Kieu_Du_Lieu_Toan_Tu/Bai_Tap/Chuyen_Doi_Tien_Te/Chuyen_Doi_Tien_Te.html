@@ -1,10 +1,100 @@
-<!DOCTYPE html>
+<!DOCTYPE htm
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
 </head>
 <body>
-$END$
+<!--<table>-->
+<!--    <tr>-->
+<!--        <td>Amount</td>-->
+<!--        <td>From Currency</td>-->
+<!--        <td>To Currency</td>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><input type="number" id="So tien"></td>-->
+<!--        <td><select id="From"><option>VietNam</option>-->
+<!--            <option>USD</option></select></td>-->
+<!--        <td><select id="To"><option>USD</option>-->
+<!--            <option>VietNam</option></select></td>-->
+<!--        <td><input type="button" value="Convert" id="Convert"></td>-->
+<!--    </tr>-->
+<!--</table>-->
+<!--    <form>-->
+<!--        <p id="result"></p>-->
+<!--        <script>-->
+<!--            document.getElementById('convert').addEventListener('click', doitien);-->
+<!--            function doitien() {-->
+<!--                let ketqua;-->
+<!--                let tien=parseInt(document.getElementById('So tien').value);-->
+<!--                let bandau=document.getElementById('From').value;-->
+<!--                let sau=document.getElementById('To').value;-->
+<!--                let result;-->
+<!--                if (bandau=="VietNam") {-->
+<!--                    if (sau=="USD")-->
+<!--                        ketqua=(Tien/23000);-->
+<!--                }-->
+<!--                if(bandau=="USD") {-->
+<!--                    if (sau=="VietNam");-->
+<!--                        ketqua=(Tien*23000)-->
+<!--                }-->
+<!--                document.getElementById('result').innerText=ketqua;-->
+<!--            }-->
+
+<!--        </script>-->
+<!--    </form>-->
+<form>
+    <table>
+        <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="number" name="amount" value="0" id="amount"></td>
+            <td>
+                <select name="fromCurrency" id="fromCurrency">
+                    <option name="VND" value="VND" >VND</option>
+                    <option name="USD" value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select name="toCurrency" id="toCurrency">
+                    <option name="USD" value="USD">USD</option>
+                    <option name="VND" value="VND" >VND</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="convertFunction()">convert</button>
+            </td>
+        </tr>
+        <tr style="color: blue">
+            <td>Result</td>
+            <td colspan="3" id="result">0</td>
+        </tr>
+    </table>
+</form>
+<script src="java.js"></script>
+<!--<script>-->
+<!--    function convertFunction() {-->
+<!--        const rate = 23000;-->
+<!--        let from = document.getElementById("fromCurrency").value;-->
+<!--        let to = document.getElementById("toCurrency").value;-->
+<!--        let amount = document.getElementById("amount").value;-->
+<!--        let result;-->
+
+<!--        if(from === to)-->
+<!--            result = amount;-->
+<!--        else if(from === "VND" && to === "USD")-->
+<!--            result = amount/rate;-->
+<!--        else-->
+<!--            result = amount*rate;-->
+
+<!--        result = result + " " + to;-->
+
+<!--        document.getElementById("result").innerHTML = result;-->
+<!--    }-->
+<!--</script>-->
 </body>
 </html>
