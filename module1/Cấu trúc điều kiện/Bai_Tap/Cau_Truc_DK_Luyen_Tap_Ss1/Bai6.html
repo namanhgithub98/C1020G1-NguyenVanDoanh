@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hoa Hồng theo doanh số</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="4">Mức Hoa hồng</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th>Mức 1</th>
+            <th>Mức 2</th>
+            <th>Mức 3</th>
+        </tr>
+        <tr>
+            <th>Doanh số</th>
+            <th>400,000,000</th>
+            <th>600,000,000</th>
+            <th>800,000,000</th>
+        </tr>
+        <tr>
+            <th>Mức thưởng</th>
+            <th>1%</th>
+            <th>1.5%</th>
+            <th>2%</th>
+        </tr>
+        <tr>
+            <th>Thưởng thêm</th>
+            <th></th>
+            <th></th>
+            <th>3%</th>
+        </tr>
+        <tr>
+            <th colspan="4">Hoa hồng > 800,000,000 sẽ được tính như sau: =(800,000,000 * 2%) + (số vượt 800,000,000 * 3%)</th>
+        </tr>
+    </table>
+<br>
+<br>
+<br>
+    <table border="1">
+        <tr>
+            <th colspan="2">Bảng tính hoa hồng</th>
+        </tr>
+        <tr>
+        <th>Saler</th>
+        <th><input type="text"></th>
+        </tr>
+        r>
+        <th>Doanh số</th>
+        <th><input type="number"></th>
+        </tr>
+        r>
+        <th>Hoa hồng nhận được</th>
+        <th><input type="number"></th>
+        </tr>
+    </table>
+        <button type="button" onclick="Tinh()">Tính</button>
+<script>
+    function Tinh() {
+        let amount ;               /* amount: Tổng doanh thu*/
+        let commission ;           /* commission: Tiền hoa hồng*/
+        let quota ;                /* quota: Số tiền vượt mức 800,000,000*/
+        if (amount < 400000000) {
+            document.write('Không có hoa hồng.');
+        } if (amount < 600000000) {
+            document.write(commission = amount * 0.01)
+        }   if (amount < 800000000) {
+            document.write(commission = amount * 0.015)
+            } else if (amount > 800000000) {
+            document.write(commission = (amount * 0.02) + (quota)*0.03 )
+        }
+        }
+</script>
+</body>
+</html>
