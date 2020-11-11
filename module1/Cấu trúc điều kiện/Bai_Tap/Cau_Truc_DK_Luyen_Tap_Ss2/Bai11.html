@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế Thu nhập cá nhân</title>
+</head>
+<body>
+    <script>
+        let Income = prompt("Nhập số tiền thu nhập hàng tháng: ");
+        let tax ;
+
+        if (Income < 3000000) {
+            alert('Không tính thuế. ');
+        } else {
+            if (Income < 7000000) {
+                tax = (Income * 0.01);
+            } else if (Income < 15000000) {
+                tax = (Income * 0.015);
+            } else {
+                tax = (Income * 0.02);
+            }
+        }
+        alert('Tiền thuế của bạn là: ' + tax);
+    </script>
+</body>
+</html>

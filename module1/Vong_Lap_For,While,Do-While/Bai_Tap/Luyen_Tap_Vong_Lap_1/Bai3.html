@@ -6,20 +6,30 @@
 </head>
 <body>
     <script>
-        function fibonacci(num) {
-            let a = 1 ;
-            let temp ;
-            let sout ;
-            while (num >= 0) {
-                temp = a ;
-                sout = a + a ;
-                document.write(+a+ '+' +a+ '=' sout);
-                return result;
-                sout = sout + a ;
-                return sout ;
-            }
-            return b ;
-        }
+        // function fibonacci(num) {
+        //     let a = 1 ;
+        //     let temp ;
+        //     let sout ;
+        //     while (num >= 0) {
+        //         temp = a ;
+        //         sout = a + a ;
+        //         document.write(+a+ '+' +a+ '=' sout);
+        //         return result;
+        //         sout = sout + a ;
+        //         return sout ;
+        //     }
+        //     return b ;
+         let a = 1;
+         let b = 1;
+         let c;
+            document.writeln(a);
+            document.writeln(b);
+        for(let i = 2;i<20;i++) {
+            c = a+b;
+            a = b;
+            b = c;
+             document.writeln(c);
+         }
     </script>
 </body>
 </html>

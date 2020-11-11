@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại</title>
+</head>
+<body>
+<!--<script>-->
+<!--    let hours = parseInt(prompt('Nhập số giờ: '));-->
+<!--    let minute = parseInt(prompt('Nhập số phút: '));-->
+<!--    let seconds = parseInt(prompt('Nhập số giây: '));-->
+
+<!--    if ()-->
+
+<!--    function (Tính) {-->
+<!--        let hours ;-->
+<!--        let minute ;-->
+<!--        let seconds ;-->
+<!--        totalseconds = (seconds * 25);-->
+<!--        totalminute = (totalseconds * 60);-->
+<!--        totalhours = (totalminute * 60);-->
+<!--    }-->
+<!--    document.write(function(Tính));-->
+<!--</script>-->
+
+
+<script>
+    let callTime = prompt("Enter total callTime (minute) : ");
+    let phoneCharge;
+
+    if (callTime > 60) phoneCharge = 3000;
+    else if (callTime > 30) phoneCharge = 3500;
+    else phoneCharge = 4000;
+
+    let total = phoneCharge * callTime;
+    alert("Total charges : " + total);
+</script>
+</body>
+</html>

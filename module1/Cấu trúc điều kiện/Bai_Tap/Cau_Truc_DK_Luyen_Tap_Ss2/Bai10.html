@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giá điện</title>
+</head>
+<body>
+    <script>
+        let kWh = prompt("Nhập chữ điện: ");
+        let result ;
+
+        if (kWh < 0) {
+            alert('Yêu cầu nhập lại. ');
+        } else {
+            if (kWh < 50) {
+                result = (kWh * 2000);
+            } else if (kWh < 100) {
+                result = (kWh * 2500);
+            } else {
+                result = (kWh * 3000);
+            }
+            }
+        alert(result);
+    </script>
+</body>
+</html>
