@@ -8,67 +8,292 @@
 <table border="1">
     <tr style="background-color: yellow">
         <th>Name</th>
-        <th><input type="text"></th>
+        <td><input type="text" name="Name" value="" id="Name"></td>
     </tr>
     <tr>
         <th>ID Card</th>
-        <th><input type="number"></th>
+        <td><input type="number" name="identityNumber" value="" id="identityNumber"></td>
     </tr>
     <tr style="background-color: yellow">
-        <th>Birthday</th>
-        <th><input type="date"></th>
+        <th>BirthDay</th>
+        <td><input type="date" name="birthDay" id="birthDay"></td>
     </tr>
     <tr>
         <th>Email</th>
-        <th><input type="text"></th>
+        <td<input type="text" name="email" id="email"></td>
     </tr>
     <tr style="background-color: yellow">
         <th>Address</th>
-        <th><input type="text"></th>
+        <td><input type="text" name="address" id="address"></td>
     </tr>
     <tr>
         <th>RentDays</th>
-        <th><input type="text"></th>
+        <td><input type="number" id="rentDay" value="" name="rentDay"></td>
     </tr>
     <tr style="background-color: yellow">
         <th>Type Customer</th>
-        <th><select><option>Diamond</option>
-            <option>Platinum</option>
-            <option>Gold</option>
-            <option>Silver</option>
-            <option>Member</option>
-        </select> </th>
+        <td><select name="typeCustomer" id="typeCustomer">
+            <option value="Diamond">Diamond</option>
+            <option value="Platinum">Platinum</option>
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+            <option value="Member">Member</option>
+        </select> </td>
     </tr>
     <tr>
         <th>Type Service</th>
-        <th>
-            <select>
+        <td>
+            <select name="service" id="service">
                 <option>Villa: 500$/1day </option>
                 <option>House: 300$/1day </option>
                 <option>Room: 100$/1day </option>
             </select>
-        </th>
+        </td>
     </tr>
     <tr style="background-color: yellow">
         <th>Type Room</th>
-        <th>
-            <select>
+        <td>
+            <select name="typeRoom" id="typeRoom">
                 <option>Vip</option>
                 <option>Business</option>
                 <option>Normal</option>
             </select>
-        </th>
+        </td>
+    </tr>
+    <tr>
+        <th>Discount</th>
+        <td>
+            <input type="number" name="discount" value="" id="discount" />
+            <label>%</label>
+        </td>
     </tr>
 </table>
-    <button type="button" onclick="furama">Nhập</button>
-<p id="name"></p>
-<p id="ID"></p>
-<p id="birth"></p>
-<p id="email"></p>
-<p id="add"></p>
-<p id="rent"></p>
-<p id="cusrank"></p>
-<p id="typeroom"></p>
-<script src="Du_An_FURAMA1.js"></script>
+    <button type="button" onclick="showInfo()">Nhập</button>
+
+<script>
+    function showInfo() {
+        // get data from Form
+        let Name = document.getElementById("Name").value;
+        let IDCard = document.getElementById("identityNumber").value;
+        let BirthDay = document.getElementById("birthDay").value;
+        let Email = document.getElementById("email").value;
+        let Address = document.getElementById("address").value;
+        let TypeCustomer = document.getElementById("typeCustomer").value;
+        let Discount = parseInt(document.getElementById("discount").value);
+        // let amountOfPeople = document.getElementById("amountOfPeople").value;
+        let RentDays = parseInt(document.getElementById("rentDay").value);
+        let TypeService = document.getElementById("service").value;
+        let TypeRoom = document.getElementById("typeRoom").value;
+
+        // price list
+        const priceVilla = 500;
+        const priceHouse = 300;
+        const priceRoom = 100;
+
+        //get price of service
+        let priceService =
+            service == "Villa"
+                ? priceVilla
+                : service == "House"
+                ? priceHouse
+                : priceRoom;
+
+        //counting total price
+        let totalPrice = priceService * rentDay * (1 - discount / 100.0);
+
+        // show info to screen
+        document.writeln("Name :            " + fullName + "<br>");
+        document.writeln("ID Card : " + identityNumber + "<br>");
+        document.writeln("Birthday :             " + birthDay + "<br>");
+        document.writeln("Email :                " + email + "<br>");
+        document.writeln("Address :              " + address + "<br>");
+        document.writeln("RentDays :             " + rentDay + "<br>");
+        document.writeln("Type Customer :     " + typeCustomer + "<br>");
+        document.writeln("Type Service :              " + service + "<br>");
+        document.writeln("Type Room :         " + typeRoom + "<br>");
+        document.writeln("Discount :             " + discount + " %" + "<br>");
+        // document.writeln("Amount Of People :     " + amountOfPeople + "<br>");
+        document.writeln("Total price :          " + totalPrice + " $");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+// <!--<form>-->
+// <!--    <table>-->
+// <!--        <tr>-->
+// <!--            <th>Full Name</th>-->
+// <!--            <td>-->
+// <!--                <input type="text" name="fullName" value="" id="fullName" />-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Identity Card Number</th>-->
+// <!--            <td>-->
+// <!--                <input-->
+// <!--                        type="number"-->
+// <!--                        name="identityNumber"-->
+// <!--                        value=""-->
+// <!--                        id="identityNumber"-->
+// <!--                />-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Birthday</th>-->
+// <!--            <td>-->
+// <!--                <input type="date" name="birthDay" id="birthDay" />-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Email</th>-->
+// <!--            <td>-->
+// <!--                <input type="text" name="email" id="email" />-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Address</th>-->
+// <!--            <td>-->
+// <!--                <input type="text" name="address" id="address" />-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Type Customer</th>-->
+// <!--            <td>-->
+// <!--                <select name="typeCustomer" id="typeCustomer">-->
+// <!--                    <option value="Diamond">Diamond</option>-->
+// <!--                    <option value="Platium">Platium</option>-->
+// <!--                    <option value="Gold">Gold</option>-->
+// <!--                    <option value="Silver">Silver</option>-->
+// <!--                    <option value="Member">Member</option>-->
+// <!--                </select>-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Discount</th>-->
+// <!--            <td>-->
+// <!--                <input type="number" name="discount" value="" id="discount" />-->
+// <!--                <label>%</label>-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Amount Of People</th>-->
+// <!--            <td>-->
+// <!--                <input-->
+// <!--                        type="number"-->
+// <!--                        name="amountOfPeople"-->
+// <!--                        value=""-->
+// <!--                        id="amountOfPeople"-->
+// <!--                />-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Rent Day</th>-->
+// <!--            <td>-->
+// <!--                <input type="number" name="rentDay" value="" id="rentDay" />-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Service</th>-->
+// <!--            <td>-->
+// <!--                <select name="service" id="service">-->
+// <!--                    <option value="Villa">Villa</option>-->
+// <!--                    <option value="House">House</option>-->
+// <!--                    <option value="Room">Room</option>-->
+// <!--                </select>-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <th>Type Of Room</th>-->
+// <!--            <td>-->
+// <!--                <select name="typeRoom" id="typeRoom">-->
+// <!--                    <option value="Vip">Vip</option>-->
+// <!--                    <option value="Business">Business</option>-->
+// <!--                    <option value="Normal">Normal</option>-->
+// <!--                </select>-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--        <tr>-->
+// <!--            <td colspan="2">-->
+// <!--                <button type="button" onclick="showInfo()">Submit</button>-->
+// <!--            </td>-->
+// <!--        </tr>-->
+// <!--    </table>-->
+// <!--</form>-->
+//
+// <!--<script>-->
+// <!--    function showInfo() {-->
+// <!--        // get data from Form-->
+// <!--        let fullName = document.getElementById("fullName").value;-->
+// <!--        let identityNumber = document.getElementById("identityNumber").value;-->
+// <!--        let birthDay = document.getElementById("birthDay").value;-->
+// <!--        let email = document.getElementById("email").value;-->
+// <!--        let address = document.getElementById("address").value;-->
+// <!--        let typeCustomer = document.getElementById("typeCustomer").value;-->
+// <!--        let discount = parseInt(document.getElementById("discount").value);-->
+// <!--        let amountOfPeople = document.getElementById("amountOfPeople").value;-->
+// <!--        let rentDay = parseInt(document.getElementById("rentDay").value);-->
+// <!--        let service = document.getElementById("service").value;-->
+// <!--        let typeRoom = document.getElementById("typeRoom").value;-->
+//
+// <!--        // price list-->
+// <!--        const priceVilla = 500;-->
+// <!--        const priceHouse = 300;-->
+// <!--        const priceRoom = 100;-->
+//
+// <!--        //get price of service-->
+// <!--        let priceService =-->
+// <!--            service == "Villa"-->
+// <!--                ? priceVilla-->
+// <!--                : service == "House"-->
+// <!--                ? priceHouse-->
+// <!--                : priceRoom;-->
+//
+// <!--        //counting total price-->
+// <!--        let totalPrice = priceService * rentDay * (1 - discount / 100.0);-->
+//
+// <!--        // show info to screen-->
+// <!--        document.writeln("Full Name :            " + fullName + "<br>");-->
+// <!--        document.writeln("Identity card Number : " + identityNumber + "<br>");-->
+// <!--        document.writeln("Birthday :             " + birthDay + "<br>");-->
+// <!--        document.writeln("Email :                " + email + "<br>");-->
+// <!--        document.writeln("Address :              " + address + "<br>");-->
+// <!--        document.writeln("Type Of Customer :     " + typeCustomer + "<br>");-->
+// <!--        document.writeln("Discount :             " + discount + " %" + "<br>");-->
+// <!--        document.writeln("Amount Of People :     " + amountOfPeople + "<br>");-->
+// <!--        document.writeln("Rent Day :             " + rentDay + "<br>");-->
+// <!--        document.writeln("Service :              " + service + "<br>");-->
+// <!--        document.writeln("Type Of Room :         " + typeRoom + "<br>");-->
+// <!--        document.writeln("Total price :          " + totalPrice + " $");-->
+// <!--    }-->
+</script>
 </body>
 </html>

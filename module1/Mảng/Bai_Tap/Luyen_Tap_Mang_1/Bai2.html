@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h4 id="result"></h4>
+<script>
+    let array= new Array();
+    let str= " ";
+    let max=0;
+    let position=1;  // position: lua chon
+    let result= document.getElementById(" result");
+    for(let i=0;i<10;i++){
+        array[i]=Math.round(Math.random()*50);
+        str += array[i]+ " ,";
+        if (array[i]>=max){
+            max=array[i];
+            position=i;
+        }
+    }
+    str+=" <br>" +" Phan tu lon nhat trong mang la:"+max+ "  vi tri " +(position+1);
+    document.getElementById("result").innerHTML=str;
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str=prompt("Nhap vao mot chuoi");
+    let array= str.split("" ,str.length);
+    let a="emyeuEMYEU";
+    let num =0;
+    for (let i=0; i<array.length; i++){
+        if (a.indexOf(array[i]) !==-1){
+            num++;
+        }
+    }
+    alert("Chuoi ban nhap la" +num+ "nguyen am");
+    document.write(str);
+</script>
+</body>
+</html>

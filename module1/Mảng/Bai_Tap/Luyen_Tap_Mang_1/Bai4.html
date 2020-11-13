@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 id=" result"></h2>
+<script>
+    let num= prompt("Nhap vao mot so nguyen");
+    let array= new Array();
+    let str= "";
+    let result=document.getElementById("result");
+    for (let i=0;i<num; i++){
+        array[i]= Math.round(Math.random()*20);
+    }
+    str= array.join("  ");
+    str += "<br>"+" Mang mo rong la: <br>";
+    array.reverse(); //dao nguoc cac phan tu
+    str += array.join( "  ");
+    document.getElementById( " result") .innerHTML= str;
+</script>
+</body>
+</html>

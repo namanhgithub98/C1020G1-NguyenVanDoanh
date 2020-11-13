@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 id="result"></h2>
+<script>
+    let num= prompt("Nhap vao so nguyen");
+    let array=new Array();
+    let str=" ";
+    let max =0 ;
+    let average=0;   // average:trung binh cong
+    let result= document.getElementById(" result");
+    for (let i=0; i<num; i++){
+        array[i]= Math.round(Math.random()*20);
+        average+= array[i];
+        str += array[i]+ "  ";
+        if (array[i] >=max){
+            max = array[i];
+        }
+    }
+    str += "<br>" + "Phan tu lon nhat trong mang la:" +max+ " || Mang co gia tri trung binh la:" + (average/num);
+    document.getElementById("result").innerHTML= str;
+</script>
+</body>
+</html>

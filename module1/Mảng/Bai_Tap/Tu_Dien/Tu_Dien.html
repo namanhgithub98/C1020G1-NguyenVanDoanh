@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="text" id="Nhap">
+    <button style="background-color: yellowgreen" id="Tim" onclick="search()">Search</button>
+    <p id="Result"></p>
+    <script>
+        let english = ["Red","Blue","Yellow","Black","White"];
+        let viet = ["Đỏ","Xanh da trời","Vàng","Đen","Trắng"];
+        let a;
+        let b;
+        function search() {
+            let a =document.getElementById('Nhap').value;
+            for (i = 0; i<english.length; i++) {
+                if(a==english[i]){
+
+                    b=viet[i]
+                    break;
+                }else b = "Khong tim thay"
+            }
+            document.getElementById("Result").innerHTML=b
+        }
+
+
+    </script>
+</body>
+</html>

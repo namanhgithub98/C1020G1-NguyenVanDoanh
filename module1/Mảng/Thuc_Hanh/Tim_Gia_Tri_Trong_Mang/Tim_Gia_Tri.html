@@ -8,11 +8,16 @@
 <script>
     let value = prompt("Enter a number: ");
     let numbers = [-3, 5, 1, 3, 2, 10];
+    let check = false
 
     for (let i = 0; i < numbers.length; i++) {
         if (value == numbers[i]) {
+            check= true;
             alert("Value " + numbers[i] + "found at " + i);
         }
+    }
+    if (!check) {
+        alert('K co');
     }
 </script>
 </body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+      // let a = Array(50);
+      //   count = 0;
+      //   let b = new Array();
+      //   while (count<50)
+      let a=new Array(10);
+        count=0;
+        let b= new Array();
+             while (count<10) {
+               let c = parseInt(prompt('Nhap vao phan tu cua mang'));
+                a[count] = c;
+               count++;
+
+          let count1=0;
+          for(let i=0;i<a.length;i++){
+
+             if(a[i] >= 10){
+                    b[count1]=a[i];
+                      count1++;
+                }
+           }
+            document.write(" Các số nguyên trong mảng lớn hơn 10 là:"+"</br>");
+            for(let i=0;i<b.length;i++){
+             document.write(b[i] + " ");
+         }
+    </script>
+</body>
+</html>
