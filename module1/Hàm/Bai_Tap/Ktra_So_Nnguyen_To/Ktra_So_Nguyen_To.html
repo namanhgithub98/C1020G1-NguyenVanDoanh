@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let primeNumber = parseInt(prompt('Nhap so ban muon kiem tra: '));
+    function isPrime(number)
+    {
+        // Biến cờ hiệu
+        let flag = true;
+
+        // Nếu n bé hơn 2 tức là không phải số nguyên tố
+        if (primeNumber < 2){
+            flag = false;
+        }
+        else{
+            // lặp từ 2 tới n-1
+            for (let i = 2; i < primeNumber-1; i++)
+            {
+                if (primeNumber % i == 0){
+                    flag = false;
+                    break;
+                }
+            }
+        }
+
+        // Kiểm tra biến flag
+        if (flag == true){
+            document.write(primeNumber + " là số nguyên tố <br/>");
+        }
+        else{
+            document.write(primeNumber + " không phải là số nguyên tố <br/>");
+        }
+    }
+    alert(isPrime(number));
+</script>
+</body>
+</html>

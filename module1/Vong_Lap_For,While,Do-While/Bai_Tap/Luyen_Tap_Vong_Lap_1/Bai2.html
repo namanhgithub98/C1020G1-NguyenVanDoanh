@@ -7,11 +7,15 @@
 <body>
     <script>
         let C = parseInt(prompt('Nhập nhiệt độ hiện tại: '));
-        while (C) {    if (C < 20)
-            alert('Yêu cầu tăng nhiệt độ.');
-        else if (C > 100)
-            alert('Yêu cầu giảm nhiệt độ.');
-        else alert('Nhiệt độ bth.');
+        while (C) {
+            if (C < 20) {
+                alert('Yêu cầu tăng nhiệt độ.');
+            } else if (C > 100) {
+                alert('Yêu cầu giảm nhiệt độ.');
+            } else {
+                alert('Nhiệt độ bth.');
+                break;
+            }
         }
         prompt('Nhập lại nhiệt độ:');
     </script>

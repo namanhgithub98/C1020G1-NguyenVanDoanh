@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        // class Temperature {
+        //     constructor(doC, doF, doKenvin) {
+        //         this.doC = doC;
+        //         this.doF = doF;
+        //         this.doK = doKenvin;
+        //     }
+        // }
+        // let doC = parseInt(prompt('Nhap do C: '));
+        // let doF = parseFloat((doC*9)/5+32);
+        // let doK = parseFloat(doC + 273.15);
+        // if (doC < -273) {
+        //     alert('Nhap lai do C: ');
+        // } else {
+        //     alert('Do F la: ' + doF);
+        //     alert('Do K la: ' + doK);
+        // }
+        //
+        //
+        //
+        class Temperature {
+            constructor(doC, doF, doKenvin) {
+                this.doC = doC;
+                this.doF = doF;
+                this.doK = doKenvin;
+            }
+        }
+            getdoF = function () {
+                return ((doC*9)/5+32) ;
+            }
+            getdoK = function () {
+                return (doC + 273.15);
+            }
+        let temperature = new Temperature(25);
+        let doF = temperature.getdoF();
+        let doK = temperature.getdoK();
+        // alert("Do C: " + doF + "; Do K: " + doK);
+            alert('Do F la: ' + doF);
+            alert('Do K la: ' + doK);
+    </script>
+</body>
+</html>
